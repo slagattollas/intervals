@@ -1,17 +1,10 @@
 package usantatecla;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class IntersectionTest {
-    private Intersection intersection;
-
-    @BeforeEach
-    void setup(){
-        intersection = new Intersection();
-    }
+public class IntersectionCheckerTest {
 
     @Test
     public void testWhenThereIsIntersectionAndCorrect(){
