@@ -4,6 +4,6 @@ public class IntersectionChecker {
 
 
     public boolean isThereIntersection(Interval interval, Interval compareInterval){
-        return true;
+        return compareInterval.getMin().isWithin(interval.getMax().value) && compareInterval.getMax().isWithin(interval.getMin().value);
     }
 }

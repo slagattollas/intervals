@@ -10,11 +10,10 @@ public class IntersectionCheckerTest {
     public void testWhenThereIsIntersectionAndCorrect(){
         //Comes the test
         IntersectionChecker checker = new IntersectionChecker();
-        Interval interval = new IntervalBuilder().open(1.1).open(3.3).build();
-        Interval intervalCompare = new IntervalBuilder().open(1.2).open(2.5).build();
+        Interval interval = new IntervalBuilder().open(2.5).open(3.3).build();
+        Interval intervalCompare = new IntervalBuilder().open(1.2).closed(2.5).build();
         boolean validated = checker.isThereIntersection(interval, intervalCompare);
         assertTrue(validated);
     }
-    @Test
-    public void testWhenThereIsIntersectionWhenBothIntervals
+
 }

@@ -15,6 +15,14 @@ public class Interval {
 			return this.min.isWithin(value) && this.max.isWithin(value);
 	}
 
+	public Min getMin() {
+		return min;
+	}
+
+	public Max getMax() {
+		return max;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
