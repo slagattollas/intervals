@@ -12,7 +12,7 @@ public class IntersectionTest {
     }
 
     @Test
-    public testWhenThereIsIntersectionAndCorrect(){
+    public void testWhenThereIsIntersectionAndCorrect(){
         //Comes the test
     }
 }
