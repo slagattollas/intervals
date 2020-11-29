@@ -10,7 +10,10 @@ public class ClosedMin extends Min {
   public boolean isWithin(double value) {
     return super.isWithin(value) || this.value == value;
   }
-
+  @Override
+  public boolean isOpen() {
+    return false;
+  }
   @Override
 	public String toString() {
 		return "[" + this.value;

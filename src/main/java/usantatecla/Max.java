@@ -11,7 +11,9 @@ public class Max {
   public boolean isWithin(double value) {
     return this.value > value;
   }
-
+  public boolean isOpen(){
+    return true;
+  }
   @Override
   public int hashCode() {
     final int prime = 31;
