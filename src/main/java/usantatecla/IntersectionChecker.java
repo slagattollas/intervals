@@ -15,19 +15,17 @@ public class IntersectionChecker {
     public Min getMin(Interval interval, Interval compareInterval){
         if(compareInterval.getMin().isOpen()){
             if(interval.getMin().value > compareInterval.getMin().value) return interval.getMin();
-            return compareInterval.getMin();
         }else{
             if(interval.getMin().value >= compareInterval.getMin().value) return interval.getMin();
-            return compareInterval.getMin();
         }
+        return compareInterval.getMin();
     }
     public Max getMax(Interval interval, Interval compareInterval){
         if(compareInterval.getMax().isOpen()){
             if(interval.getMax().value < compareInterval.getMax().value) return interval.getMax();
-            return compareInterval.getMax();
         }else{
             if(interval.getMax().value <= compareInterval.getMax().value) return interval.getMax();
-            return compareInterval.getMax();
         }
+        return compareInterval.getMax();
     }
 }
