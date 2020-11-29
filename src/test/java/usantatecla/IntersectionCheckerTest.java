@@ -15,4 +15,6 @@ public class IntersectionCheckerTest {
         boolean validated = checker.isThereIntersection(interval, intervalCompare);
         assertTrue(validated);
     }
+    @Test
+    public void testWhenThereIsIntersectionWhenBothIntervals
 }
