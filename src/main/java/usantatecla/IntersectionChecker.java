@@ -12,5 +12,22 @@ public class IntersectionChecker {
         Max max = this.getMax(interval, compareInterval);
         return new Interval(min,max);
     }
-
+    public Min getMin(Interval interval, Interval compareInterval){
+        if(interval.getMin().isOpen()){
+            if(interval.getMin().value > compareInterval.getMin().value) return interval.getMin();
+            return compareInterval.getMin();
+        }else{
+            if(interval.getMin().value >= compareInterval.getMin().value) return interval.getMin();
+            return compareInterval.getMin();
+        }
+    }
+    public Max getMax(Interval interval, Interval compareInterval){
+        if(interval.getMax().isOpen()){
+            if(interval.getMax().value < compareInterval.getMax().value) return interval.getMax();
+            return compareInterval.getMax();
+        }else{
+            if(interval.getMax().value <= compareInterval.getMax().value) return interval.getMax();
+            return compareInterval.getMax();
+        }
+    }
 }
