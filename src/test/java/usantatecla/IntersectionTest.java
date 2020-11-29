@@ -3,6 +3,8 @@ package usantatecla;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class IntersectionTest {
     private Intersection intersection;
 
@@ -14,5 +16,7 @@ public class IntersectionTest {
     @Test
     public void testWhenThereIsIntersectionAndCorrect(){
         //Comes the test
+        boolean validated = intersection.isIntersection();
+        assertTrue(validated);
     }
 }
